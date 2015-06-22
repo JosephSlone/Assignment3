@@ -1,3 +1,8 @@
+# This is a scratch file where I keep code ideas that I am testing.
+#
+#  -- Joe
+#
+
 
 # Find minimum value of column 11 (in this case)
 # and store it in the scalar "m"
@@ -34,7 +39,7 @@ test1 <- function(type) {
 colID <- function(name) {
 
     switch(tolower(name),
-           "hear attack" = 11,
+           "heart attack" = 11,
            "heart failure" = 17,
            "pneumonia" = 23,
            0)
