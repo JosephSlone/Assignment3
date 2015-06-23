@@ -45,6 +45,13 @@ colID <- function(name) {
            0)
 }
 
-Function to trim white space from a string.
+# Function to trim white space from a string.
 
 function(x) gsub("^[[:space:]]+|[[:space:]]+$", "", x)
+
+
+# Rank by column?
+
+data$Ranking <- ave( data$Hospital.30.Day.Death..Mortality..Rates.from.Heart.Attack, data$State, FUN=rank)
+
+o <- data[ with(data, order(State, Ranking)), ]
