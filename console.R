@@ -55,3 +55,10 @@ function(x) gsub("^[[:space:]]+|[[:space:]]+$", "", x)
 data$Ranking <- ave( data$Hospital.30.Day.Death..Mortality..Rates.from.Heart.Attack, data$State, FUN=rank)
 
 o <- data[ with(data, order(State, Ranking)), ]
+
+data <- read.csv(
+    "rprog-data-ProgAssignment3-data/outcome-of-care-measures.csv",
+    colClasses="character",
+    na.strings="Not Available"
+)
+
